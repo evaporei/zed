@@ -79,6 +79,7 @@ impl RenderOnce for List {
         v_flex()
             .w_full()
             .py(DynamicSpacing::Base04.rems(cx))
+            .gap_y_1()
             .children(self.header)
             .map(|this| match (self.children.is_empty(), self.toggle) {
                 (false, _) => this.children(self.children),
